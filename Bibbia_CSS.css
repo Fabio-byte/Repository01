@@ -1,0 +1,45 @@
+
+.color_of_chapter {
+  font-size: 16pt;
+  color: darkblue;
+  font-weight: bold;
+}
+
+
+.header {
+    background-color: #3333ff;
+    color: white;
+    font-size: xx-large;
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+}
+
+p.presentation {
+    font-style: italic;
+    font-size: 15pt;
+    color:darkblue;
+    padding-left:7%;
+    padding-right:7%
+} 
+
+h3.h3 {
+    text-align: inherit;
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-style: normal;
+    font-family: "Palatino Linotype";
+    font-size: x-large;
+    font-variant: normal;
+}
+
+p.p {
+    font-family: "Times New Roman";
+    font-size: large;
+    font-variant: normal;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+
