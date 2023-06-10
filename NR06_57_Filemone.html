@@ -50,11 +50,25 @@
         anch'egli cristiano, a fargli grazia e ad accoglierlo come un fratello.
     </p>
 
-    <audio controls>
-        <source src="NR06_57_Filemone/Fm.mp3" type="audio/mpeg">
-        Audio.
-      </audio>
-      
+    <button onclick="openPopup()">Apri Finestra Audio</button>
+
+    <script>
+    function openPopup() {
+      // Apri una nuova finestra popup
+      var popup = window.open("", "FinestraAudio", "width=400,height=200");
+    
+      // Crea il contenuto della finestra popup
+      var popupContent = `
+        <audio controls>
+          <source src="NR06_57_Filemone/Fm.mp3" type="audio/mpeg">
+          Il tuo browser non supporta l'elemento audio.
+        </audio>
+      `;
+    
+      // Scrivi il contenuto nella finestra popup
+      popup.document.write(popupContent);
+    }
+    </script>
     
     <h3 class="h3">Indirizzo e saluti</h3>
 
