@@ -1,7 +1,8 @@
 .button_audio {
-    background-color: blue; /* Colore di sfondo del bottone */
+    background: #428aff; /* Colore di sfondo del bottone */
     color: #ffffff; /* Colore del testo del bottone */
     padding: 10px 20px; /* Spaziatura interna del bottone */
+    margin-top: 5px;
     border: none; /* Rimuovi il bordo del bottone se non è necessario */
   }
   
