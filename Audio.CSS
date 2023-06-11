@@ -1,0 +1,13 @@
+.button_audio {
+    background-color: #3a0d9d; /* Colore di sfondo del bottone */
+    color: #ffffff; /* Colore del testo del bottone */
+    padding: 10px 20px; /* Spaziatura interna del bottone */
+    border: none; /* Rimuovi il bordo del bottone se non è necessario */
+  }
+  
+  .button_audio::before {
+    content: "\f001"; /* Codice dell'icona musicale */
+    font-family: "Font Awesome"; /* Font dell'icona */
+    margin-right: 5px; /* Spaziatura a destra dell'icona */
+  }
+  
