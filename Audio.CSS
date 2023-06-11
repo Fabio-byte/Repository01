@@ -5,10 +5,10 @@
     margin-top: 5px;
     border: none; /* Rimuovi il bordo del bottone se non è necessario */
   }
-  
+ /* 
   .button_audio::before {
-    content: "\f001"; /* Codice dell'icona musicale */
-    font-family: "Font Awesome"; /* Font dell'icona */
+    content: "\f001";  Codice dell'icona musicale 
+    font-family: "Font Awesome";  Font dell'icona 
     margin-right: 5px; /* Spaziatura a destra dell'icona */
-  }
+  /*
   
