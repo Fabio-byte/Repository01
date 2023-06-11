@@ -341,3 +341,9 @@ function scriviMenu(){
 </nav>';
 
 }
+
+/* Funzione per i link audio*/
+function openAudio(audioPath) {
+    let windowFeatures = "width=400,height=150";
+    window.open(audioPath, "Audio", windowFeatures);
+}
