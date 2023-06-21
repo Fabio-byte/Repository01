@@ -1,0 +1,15 @@
+{
+    "name": "nome-progetto",
+    "version": "1.0.0",
+    "description": "Descrizione del progetto",
+    "scripts": {
+      "start": "comando-per-avviare-il-progetto"
+    },
+    "dependencies": {
+      "nome-dipendenza": "versione-dipendenza"
+    },
+    "devDependencies": {
+      "nome-dipendenza-dev": "versione-dipendenza-dev"
+    }
+  }
+  
