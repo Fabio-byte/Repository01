@@ -1,0 +1,34 @@
+const playlistElement = document.getElementById('playlist');
+const playlistFolder = 'https://drive.google.com/drive/folders/10677PpOOE30kW3YtervbrXEb6ueidD8j?usp=drive_link'; // Cambia il percorso alla tua cartella di playlist
+
+console.log('Inizio del codice');
+
+fetch(playlistFolder)
+  .then(response => response.text())
+  .then(data => {
+    console.log('Contenuto della cartella:', data); // Stampa il contenuto della cartella
+    const parser = new DOMParser();
+    const html = parser.parseFromString(data, 'text/html');
+    const links = html.querySelectorAll('a[href$=".mp3"]');
+    console.log('Links trovati:', links); // Stampa tutti i link trovati nella cartella
+
+    links.forEach(link => {
+      const songName = link.textContent;
+      const songURL = `${playlistFolder}/${link.getAttribute('href')}`;
+      console.log('Nome del brano:', songName);
+      console.log('URL del brano:', songURL);
+
+      const listItem = document.createElement('li');
+      const audioElement = document.createElement('audio');
+      audioElement.src = songURL;
+      audioElement.controls = true;
+
+      console.log('Elemento audio creato:', audioElement);
+
+      listItem.textContent = songName;
+      listItem.appendChild(audioElement);
+      playlistElement.appendChild(listItem);
+    });
+
+    console.log('Fine del codice');
+  });
