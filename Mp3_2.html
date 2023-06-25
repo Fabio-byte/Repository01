@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lettore MP3</title>
+  <style>
+    .playlist {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .playlist li {
+      cursor: pointer;
+      margin-bottom: 5px;
+    }
+
+    .playlist li:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <audio id="audioPlayer" controls></audio>
+
+  <ul class="playlist">
+    <li onclick="changeTrack('https://drive.google.com/file/d/1aaqshs0vTwtgiGxq4MIcE6tJknErj0AD/view?usp=drive_link')">Brano 1</li>
+    <li onclick="changeTrack('https://drive.google.com/file/d/1l0TwVzigJV25djuYA0YirKb7ePm1tpCf/view?usp=drive_link')">Brano 2</li>
+    <li onclick="changeTrack('https://drive.google.com/file/d/15nR8r8ZDSeIlUnEPv81yZE04RjhV2O2W/view?usp=drive_link')">Brano 1</li>
+    <li onclick="changeTrack('https://drive.google.com/file/d/1WKmxGJX_Z51dzz4I_RlQ_lj2O6bszJ0S/view?usp=drive_link')">Brano 3</li>
+    <!-- Aggiungi ulteriori elementi <li> per i brani aggiuntivi -->
+  </ul>
+
+  <script>
+    var audioPlayer = document.getElementById("audioPlayer");
+    var playlistItems = document.querySelectorAll(".playlist li");
+
+    function changeTrack(url) {
+      audioPlayer.src = url;
+      audioPlayer.play();
+    }
+
+    // Aggiungi un listener per riprodurre automaticamente il primo brano all'avvio della pagina
+    window.addEventListener("load", function() {
+      if (playlistItems.length > 0) {
+        var firstTrackURL = playlistItems[0].getAttribute("onclick");
+        eval(firstTrackURL);
+      }
+    });
+  </script>
+</body>
+</html>
