@@ -1,50 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Lettore MP3</title>
+  <title>Bottoni Numerati</title>
   <style>
     .playlist {
-      list-style-type: none;
-      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
     }
 
     .playlist li {
-      cursor: pointer;
-      margin-bottom: 5px;
+      width: 33.33%;
+      padding: 10px;
+      box-sizing: border-box;
+      text-align: center;
     }
 
-    .playlist li:hover {
-      text-decoration: underline;
+    .color_of_chapter {
+      font-size: 18px;
+      background-color: #ECECEC;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <audio id="audioPlayer" controls></audio>
-
-  <ul class="playlist">
-    <li onclick="changeTrack('https://drive.google.com/file/d/1aaqshs0vTwtgiGxq4MIcE6tJknErj0AD/view?usp=drive_link')">Brano 1</li>
-    <li onclick="changeTrack('https://drive.google.com/file/d/1l0TwVzigJV25djuYA0YirKb7ePm1tpCf/view?usp=drive_link')">Brano 2</li>
-    <li onclick="changeTrack('https://drive.google.com/file/d/15nR8r8ZDSeIlUnEPv81yZE04RjhV2O2W/view?usp=drive_link')">Brano 1</li>
-    <li onclick="changeTrack('https://drive.google.com/file/d/1WKmxGJX_Z51dzz4I_RlQ_lj2O6bszJ0S/view?usp=drive_link')">Brano 3</li>
-    <!-- Aggiungi ulteriori elementi <li> per i brani aggiuntivi -->
-  </ul>
+  <h3>4</h3>
+  <p class="p">
+    <div class="playlist">
+      <ul>
+        <li>
+          <button class="color_of_chapter" onclick="openAudio('https://drive.google.com/file/d/14wR_SJ0aGL_jWQBeEwigJti6OsViI1A3/view?usp=drive_link')">Ascolta...</button>
+          <span class="color_of_chapter">1</span>
+        </li>
+        <li>
+          <button class="color_of_chapter" onclick="openAudio('https://drive.google.com/file/d/14wR_SJ0aGL_jWQBeEwigJti6OsViI1A3/view?usp=drive_link')">Ascolta...</button>
+          <span class="color_of_chapter">2</span>
+        </li>
+        <li>
+          <button class="color_of_chapter" onclick="openAudio('https://drive.google.com/file/d/14wR_SJ0aGL_jWQBeEwigJti6OsViI1A3/view?usp=drive_link')">Ascolta...</button>
+          <span class="color_of_chapter">3</span>
+        </li>
+        <li>
+          <button class="color_of_chapter" onclick="openAudio('https://drive.google.com/file/d/14wR_SJ0aGL_jWQBeEwigJti6OsViI1A3/view?usp=drive_link')">Ascolta...</button>
+          <span class="color_of_chapter">4</span>
+        </li>
+        <li>
+          <button class="color_of_chapter" onclick="openAudio('https://drive.google.com/file/d/14wR_SJ0aGL_jWQBeEwigJti6OsViI1A3/view?usp=drive_link')">Ascolta...</button>
+          <span class="color_of_chapter">5</span>
+        </li>
+        <li>
+          <button class="color_of_chapter" onclick="openAudio('https://drive.google.com/file/d/14wR_SJ0aGL_jWQBeEwigJti6OsViI1A3/view?usp=drive_link')">Ascolta...</button>
+          <span class="color_of_chapter">6</span>
+        </li>
+        <li>
+          <button class="color_of_chapter" onclick="openAudio('https://drive.google.com/file/d/14wR_SJ0aGL_jWQBeEwigJti6OsViI1A3/view?usp=drive_link')">Ascolta...</button>
+          <span class="color_of_chapter">7</span>
+        </li>
+        <li>
+          <button class="color_of_chapter" onclick="openAudio('https://drive.google.com/file/d/14wR_SJ0aGL_jWQBeEwigJti6OsViI1A3/view?usp=drive_link')">Ascolta...</button>
+          <span class="color_of_chapter">8</span>
+        </li>
+        <li>
+          <button class="color_of_chapter" onclick="openAudio('https://drive.google.com/file/d/14wR_SJ0aGL_jWQBeEwigJti6OsViI1A3/view?usp=drive_link')">Ascolta...</button>
+          <span class="color_of_chapter">9</span>
+        </li>
+      </ul>
+    </div>
+  </p>
 
   <script>
-    var audioPlayer = document.getElementById("audioPlayer");
-    var playlistItems = document.querySelectorAll(".playlist li");
-
-    function changeTrack(url) {
-      audioPlayer.src = url;
-      audioPlayer.play();
+    function openAudio(url) {
+      // Implementa l'azione desiderata quando viene aperto un file audio
+      console.log("File audio aperto:", url);
     }
-
-    // Aggiungi un listener per riprodurre automaticamente il primo brano all'avvio della pagina
-    window.addEventListener("load", function() {
-      if (playlistItems.length > 0) {
-        var firstTrackURL = playlistItems[0].getAttribute("onclick");
-        eval(firstTrackURL);
-      }
-    });
   </script>
 </body>
 </html>
